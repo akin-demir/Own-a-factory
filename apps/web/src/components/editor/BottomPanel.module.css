@@ -1,0 +1,234 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  background: var(--bg-base);
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: var(--text-secondary);
+}
+
+.tabActive {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  font-size: 12px;
+}
+
+.empty {
+  padding: 16px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Scene Tree */
+.tree {
+  padding: 4px 0;
+}
+
+.treeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  transition: background 0.1s;
+}
+
+.treeItem:hover {
+  background: var(--bg-panel-hover);
+}
+
+.treeIcon {
+  color: var(--text-muted);
+  width: 14px;
+  text-align: center;
+}
+
+.treeName {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.treeType {
+  color: var(--text-muted);
+  margin-left: auto;
+  font-size: 11px;
+}
+
+/* Tag Monitor */
+.tagMonitor {
+  display: flex;
+  flex-direction: column;
+}
+
+.tagHeader {
+  display: grid;
+  grid-template-columns: 1fr 120px 60px;
+  padding: 6px 12px;
+  background: var(--bg-base);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+}
+
+.tagRow {
+  display: grid;
+  grid-template-columns: 1fr 120px 60px;
+  padding: 5px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tagRow:hover {
+  background: var(--bg-panel-hover);
+}
+
+.tagName {
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.tagVal {
+  color: var(--text-muted);
+  font-family: monospace;
+  font-weight: 600;
+}
+
+.valTrue { color: var(--success); }
+.valFalse { color: var(--text-muted); }
+
+.tagType {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* PLC Editor */
+.plcEditor {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plcTextarea {
+  flex: 1;
+  background: #0d0d10;
+  color: #a8d8a8;
+  border: none;
+  outline: none;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 12px 16px;
+  resize: none;
+  width: 100%;
+}
+
+.plcTextarea:disabled {
+  opacity: 0.6;
+}
+
+.plcRunning {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--text-muted);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+/* Wiring */
+.wiring {
+  display: flex;
+  flex-direction: column;
+}
+
+.wiringHeader {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  padding: 6px 12px;
+  background: var(--bg-base);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.wiringRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.wiringRow:hover {
+  background: var(--bg-panel-hover);
+}
+
+.wiringTag {
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.wiringArrow {
+  color: var(--text-muted);
+}
+
+.wiringAddr {
+  color: var(--accent);
+  font-family: monospace;
+}
+
+/* Console */
+.console {
+  padding: 4px 0;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.logLine {
+  padding: 3px 12px;
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.logLine:hover {
+  background: var(--bg-panel-hover);
+}

@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "paths": {
+      "@own-a-factory/types": ["../../packages/types/src/index.ts"],
+      "@own-a-factory/db": ["../../packages/db/src/index.ts"]
+    }
+  },
+  "include": ["src", "../../packages/types/src", "../../packages/db/src"]
+}
